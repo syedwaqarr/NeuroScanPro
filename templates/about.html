@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <title>Neuro Scan | About</title>
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="{{url_for('index')}}" class="logo">Neuro Scan Pro</a>
+
+        <nav class="navbar">
+            <a href="{{url_for('index')}}" style="--i:1;">Home</a>
+            <a href="{{url_for('about')}}" style="--i:2;" class="active">About</a>
+            <a href="{{url_for('predict')}}" style="--i:3;">Predict</a>
+        </nav>
+
+        <div class="social-media">
+            <a href="https://github.com/syedwaqarr/year-project" target="_blank"><i class="bx bxl-github" style="color: #A91D3A;"></i></a>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Overview</h1>
+            <p>This project focused on developing a robust image classification model to differentiate between <b>Healthy</b> and <b>Tumor</b> images using a dataset of over 4500+ samples. The model achieved exceptional performance with an overall accuracy of <b>98%</b>.The healthy and tumor categories were effectively distinguished, demonstrating the model's reliability in medical image classification tasks.</p>
+
+            <h3>Tools & Technologies</h3>
+            <span>Numpy,</span>
+            <span>pandas,</span>
+            <span>seaborn,</span>
+            <span>Matplotlib,</span>
+            <span>scikit-learn,</span>
+            <span>PyTorch,</span>
+            <span>Pillow,</span>
+            <span>JavaScript</span>
+            <span>CSS,</span>
+            <span>HTML,</span>
+            <span>Google Colab,</span>
+            <span>Kaggle</span>
+        </div>
+
+        <div class="home-content">
+            <h1>Our Commitment</h1>
+            <p>At Neuro Scan Pro, we are committed to advancing the field of medical imaging and diagnostics. Our goal is to provide a tool that not only enhances diagnostic accuracy but also contributes to improved patient outcomes. We continuously strive to innovate and refine our models, driven by a passion for excellence and a dedication to supporting the medical community.</p>
+        </div>
+    </section>
+
+    
+</body>
+</html>

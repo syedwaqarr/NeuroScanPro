@@ -1,0 +1,9 @@
+__pycache__
+.venv
+brain/
+Brain Tumor Data Set/
+metadata_rgb_only.csv
+metadata.csv
+model_complete.pth
+tumor-dataset.zip
+weights.pt

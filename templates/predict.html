@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <title>Neuro Scan | Predict</title>
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="{{url_for('index')}}" class="logo">Neuro Scan Pro</a>
+
+        <nav class="navbar">
+            <a href="{{url_for('index')}}" style="--i:1;">Home</a>
+            <a href="{{url_for('about')}}" style="--i:2;">About</a>
+            <a href="{{url_for('predict')}}" style="--i:3;" class="active">Predict</a>
+        </nav>
+
+        <div class="social-media">
+            <a href="https://github.com/syedwaqarr/year-project" target="_blank"><i class="bx bxl-github" style="color: #A91D3A;"></i></a>
+        </div>
+    </header>
+
+
+<!-- ============================ Upload File ============================= -->
+
+    <div class="hero">
+        <p class="heading">Browse or upload image</p>
+        <label for="input-file" id="drop-area">
+            <input type="file" accept="image/*" id="input-file" hidden>
+            <div id="image-view">
+                <img src="../static/images/uploaddddd.png" alt="upload" draggable="false">
+                <p>Drag and drop or click here <br> to upload image</p>
+                <span>Upload an image from desktop</span>
+            </div>
+        </label>
+        <button id="predict-btn">Predict</button>
+        <div id="result" style="display: none;"></div>
+    </div>
+
+
+
+
+    <script src="../static/js/custom.js"></script>
+</body>
+</html>

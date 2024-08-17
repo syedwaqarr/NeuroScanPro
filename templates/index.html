@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <title>Neuro Scan | Home</title>
+    
+</head>
+<body>
+
+    <header class="header">
+        <a href="{{url_for('index')}}" class="logo">Neuro Scan Pro</a>
+
+        <nav class="navbar">
+            <a href="{{url_for('index')}}" style="--i:1;" class="active">Home</a>
+            <a href="{{url_for('about')}}" style="--i:2;">About</a>
+            <a href="{{url_for('predict')}}" style="--i:3;">Predict</a>
+        </nav>
+
+        <div class="social-media">
+            <a href="https://github.com/syedwaqarr/year-project" target="_blank"><i class="bx bxl-github"></i></a>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>AI-Driven Brain Imaging</h1>
+            <p>Our brain tumor detection model uses advanced machine learning to analyze medical images with precision. It helps healthcare professionals identify potential tumors more accurately and efficiently. Discover a practical tool designed to support better diagnosis and treatment planning.</p>
+            <a href="{{url_for('about')}}" class="btn">Read More</a>
+        </div>
+
+
+
+        <div class="home-img">
+                <img src="../static/images/brainnnnn.png" alt="img">
+        </div>
+        
+        <div class="blob-container">
+            <svg class="blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#A91D3A" d="M55.5,-54.6C70.1,-40.8,79,-20.4,77.9,-1.1C76.8,18.2,65.7,36.4,51.1,52C36.4,67.6,18.2,80.6,-1.1,81.7C-20.4,82.8,-40.7,71.9,-55.4,56.3C-70.1,40.7,-79.1,20.4,-80.2,-1.1C-81.3,-22.6,-74.6,-45.3,-60,-59C-45.3,-72.7,-22.6,-77.6,-1.1,-76.4C20.4,-75.3,40.8,-68.3,55.5,-54.6Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+    </section>
+
+
+    
+    
+</body>
+</html>
