@@ -12,8 +12,6 @@ import torch.nn.functional as F
 # Define the Flask app
 app = Flask(__name__)
 
-# run_with_ngrok(app)
-
 
 # Define the model class
 class CNN_TUMOR(nn.Module):

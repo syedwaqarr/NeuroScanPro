@@ -1,59 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     // Init
-//     document.querySelector('.image-section').style.display = 'none';
-//     document.querySelector('.loader').style.display = 'none';
-//     document.querySelector('#result').style.display = 'none';
-
-//     function readURL(input) {
-//         if (input.files && input.files[0]) {
-//             var reader = new FileReader();
-//             reader.onload = function (e) {
-//                 document.querySelector('#imagePreview').src = e.target.result;
-//             }
-//             reader.readAsDataURL(input.files[0]);
-//         }
-//     }
-
-//     document.querySelector('#imageUpload').addEventListener('change', function () {
-//         document.querySelector('.image-section').style.display = 'block';
-//         document.querySelector('#btn-predict').style.display = 'block';
-//         var result = document.querySelector('#result');
-//         result.textContent = '';
-//         result.style.display = 'none';
-//         readURL(this);
-//     });
-
-//     // Predict
-//     document.querySelector('#btn-predict').addEventListener('click', function () {
-//         var form = document.querySelector('#upload-file');
-//         var formData = new FormData(form);
-
-//         // Show loading animation
-//         this.style.display = 'none';
-//         document.querySelector('.loader').style.display = 'block';
-
-//         // Make prediction by calling api /predict
-//         fetch('/predict', {
-//             method: 'POST',
-//             body: formData
-//         })
-//         .then(response => response.text())
-//         .then(data => {
-//             // Get and display the result
-//             document.querySelector('.loader').style.display = 'none';
-//             var result = document.querySelector('#result');
-//             result.style.display = 'block';
-//             result.textContent = ' Result:  ' + data;
-//             console.log('Success!');
-//         })
-//         .catch(error => {
-//             console.error('Error:', error);
-//             document.querySelector('.loader').style.display = 'none';
-//             document.querySelector('#btn-predict').style.display = 'block';
-//         });
-//     });
-// });
-
 
 console.log("JS file is linked successfully");
 
@@ -72,6 +16,11 @@ function uploadImage() {
         imageView.style.backgroundImage = `url(${imgLink})`;
         imageView.textContent = "";
         imageView.style.border = 0;
+
+        // Clear previous prediction result
+        resultDiv.textContent = '';
+        resultDiv.style.display = 'none';
+        predictBtn.textContent = 'Predict'; // Reset button text
     }
 }
 
@@ -107,6 +56,7 @@ predictBtn.addEventListener('click', function() {
         resultDiv.textContent = `Prediction: ${data}`; // Adjust based on the server's response
         resultDiv.style.display = 'block';
         predictBtn.textContent = 'Predict'; // Reset button text
+        
     })
     .catch(error => {
         console.error('Error:', error);
